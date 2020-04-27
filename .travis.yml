@@ -55,11 +55,11 @@ install:
 
 # Instalar pyaudio
 
-  - sudo pip3 install pyaudio
+  - sudo pip install pyaudio
 
 # Instalar SpeechRecognition
 
-  - sudo pip3 install SpeechRecognition
+  - sudo pip install SpeechRecognition
 
 # Tareas a ejecutar antes de nuestra prueba
 
