@@ -36,6 +36,12 @@ print("Starting system ...")
 print("")
 print("Loading Speech Recognition module ...")
 
+
+print("")
+print("")
+print("**************************************************************************")
+print("YARP configuration:")
+print("**************************************************************************")
 print("")
 print("Initializing YARP network ...")
 
@@ -73,6 +79,12 @@ speechRecognitionEngine = sr.Recognizer()
 
 exit=0
 
+print("")
+print("")
+print("**************************************************************************")
+print("Processing:")
+print("**************************************************************************")
+
 while exit==0:
 
     try:
@@ -93,6 +105,12 @@ while exit==0:
             # Recognize audio source
             print("Recognizing ...")
             recognizedText = speechRecognitionEngine.recognize_google(audio, language='es-ES')
+
+            print("")
+            print("")
+            print("**************************************************************************")
+            print("Results:")
+            print("**************************************************************************")
             print("")
             print("You said: " + recognizedText)
             print("")
@@ -106,13 +124,22 @@ while exit==0:
         print("")
         print("Error, Request Google Speech API.")
         print("")
+        print("**************************************************************************")
 
     except sr.UnknownValueError:
         print("")
         print("Unknown Error")
         print("")
+        print("**************************************************************************")
+
 
 # Close YARP ports
 print("Closing YARP ports ...")
 speechRecognition_inputPort.close()
 speechRecognition_outputPort.close()
+
+print("")
+print("")
+print("**************************************************************************")
+print("Program finished")
+print("**************************************************************************")
