@@ -50,7 +50,7 @@ yarp.Network.init()
 
 
 print("")
-print("Opening data input port with name /speechRecognition/data:i ...")
+print("[INFO] Opening data input port with name /speechRecognition/data:i ...")
 
 # Open input tts port
 speechRecognition_inputPort = yarp.Port()
@@ -61,7 +61,7 @@ speechRecognition_inputPort.open(speechRecognition_inputPortName)
 inputBottle=yarp.Bottle()
 
 print("")
-print("Opening data output port with name /speechRecognition/data:o ...")
+print("[INFO] Opening data output port with name /speechRecognition/data:o ...")
 
 # Open output tts port
 speechRecognition_outputPort = yarp.Port()
@@ -112,7 +112,7 @@ while exit==0:
             print("Results:")
             print("**************************************************************************")
             print("")
-            print("You said: " + recognizedText)
+            print("[RESULTS] You said: " + recognizedText)
             print("")
 
             # Publish recognized text
@@ -122,13 +122,13 @@ while exit==0:
 
     except sr.RequestError as e:
         print("")
-        print("Error, Request Google Speech API.")
+        print("[ERROR] Error, Request Google Speech API.")
         print("")
         print("**************************************************************************")
 
     except sr.UnknownValueError:
         print("")
-        print("Unknown Error")
+        print("[ERROR] Unknown Error")
         print("")
         print("**************************************************************************")
 
